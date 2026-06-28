@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCatalog - Transaksi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">MyCatalog</div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="profile-053.html">Profile</a>
+            <a href="transaksi-053.html">Transaksi</a>
+            <a href="login-053.html">Login</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="transaksi" class="page-section active">
+            <h2 style="margin-bottom: 10px;">Form & Data Transaksi</h2>
+            <p class="subtitle" style="margin-bottom: 20px;">Tema: Katalog Buku</p>
+
+            <div class="form-container" style="background: #f8f9fa; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                <form id="transactionForm">
+                    <div class="form-group">
+                        <label for="namaBarang">Pilih Katalog Buku</label>
+                        <select id="namaBarang" required>
+                            <option value="">-- Pilih Produk --</option>
+                            <option value="Novel Ambatubas" data-harga="80000">Novel Ambatubas - Rp 80.000</option>
+                            <option value="Buku jurnal Wiranto" data-harga="150000">Buku jurnal Wiranto - Rp 150.000</option>
+                            <option value="Buku cerita kewer kewer" data-harga="45000">Buku cerita kewer kewer - Rp 45.000</option>
+                            <option value="Koleksi Gambar Mas Fuad" data-harga="75000">Koleksi Gambar Mas Fuad - Rp 75.000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="jumlahBarang">Jumlah Pembelian</label>
+                        <input type="number" id="jumlahBarang" min="1" placeholder="Masukkan jumlah barang..." required>
+                    </div>
+                    <button type="submit" class="btn-primary w-full" style="margin-top: 10px;">Input Data Transaksi</button>
+                </form>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Barang</th>
+                            <th>Jumlah</th>
+                            <th>Harga Satuan</th>
+                            <th>Total Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionTableBody">
+                        <tr>
+                            <td>1</td>
+                            <td>Novel Ambatubas</td>
+                            <td>1</td>
+                            <td>Rp 80.000</td>
+                            <td>Rp 80.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Catalog Saya. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

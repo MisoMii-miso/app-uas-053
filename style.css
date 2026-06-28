@@ -1,0 +1,203 @@
+        /* ==========================================================================
+        CSS RESET & GLOBAL STYLES
+           ========================================================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header & Navigasi (bisa diubah untuk warnanya) */
+        header {
+            background-color: #ff00a2;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Container Konten Utama */
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        /* Halaman Konten (Disembunyikan secara default, muncul via JS atau javascript) */
+        .page-section {
+            display: none;
+            text-align: center;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* Hero / Profile Elements */
+        .profile-avatar {
+        width: 90px;
+        height: 90px;
+        background-color: #e9ecef;
+        border: 2px solid #ff00a2;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #424242;
+        font-size: 0.8rem;
+        overflow: hidden; /* TAMBAHKAN INI: Agar gambar yang keluar lingkaran otomatis terpotong */
+        }
+
+        /* TAMBAHKAN SELECTOR BARU INI */
+        .profile-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Membuat gambar proporsional dan tidak gepeng */
+        border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #212529;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: #6c757d;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        /* Tombol Biru Khas Gambar 1 */
+        .btn-primary {
+            background-color:  #ff00a2;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #9d0063;
+        }
+
+        /* Form & Input Styling  */
+        .form-container {
+            max-width: 550px;
+            margin: 30px auto 0;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: #007bff;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        /* Tabel Transaksi (form) */
+        .table-responsive {
+            margin-top: 30px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        table, th, td {
+            border: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            padding: 12px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+        }
+
+        /* Footer (color) */
+        footer {
+            background-color: #ff00a2;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.8rem;
+            margin-top: auto;
+        }
+
+        /* Animasi Transisi Halaman */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
